@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <title></title>
+</head>
+
+<body>
+  
+  <!-- Container for all structure -->
+  <div class="container">
+    
+    <!-- navigation head -->
+    <div class="nav-head">
+      
+      <!-- website logo -->
+      <img src="" alt="business logo">
+      
+      <div class="burger-menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      
+      <!-- navigation links -->
+      <nav class="menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      
+    </div>
+    
+    <!-- Hero section -->
+    <header>
+      
+      <h1>FIND YOUR STRENGTH</h1>
+      <p>Empowering Fitness Solutions for a Stronger, Healthier You</p>
+      <a href="#"><button class="cta-button">Book Now </button></a>
+      
+    </header>
+    
+    <main>
+      
+      <!-- The offer section(this compromised of what the business offers -->
+      <section class="first-section offer-section">
+        
+        <div class="sub-section benefit-section-1">
+          <div class="image instructor-image">
+            <img src="body-abs.png" alt="body abs of an icon">
+          </div>
+          <h3><span>Great Instructors</span></h3>
+          <p>Learn from the best, train with the rest - Expert guidance for a stronger you.</p>
+        </div>
+        
+        <div class="sub-section benefit-section-2">
+          <div class="image treadmill-image">
+             <img src="barbell.png" alt="barbell of an icon">
+          </div>
+          <h3><span>State-of-the-art Equipment</span></h3>
+          <p>Elevate your workout, elevate your results - Top-tier equipment for a premium fitness experience.</p>
+        </div>
+        
+        <div class="sub-section benefit-section-3">
+          <div class="image instructor-and-client">
+            <img src="heart-rate.png" alt="heart rate on a phone icon">
+          </div>
+          <h3><span>Personalized Attention</span></h3>
+          <p>Your fitness, your way - Customized support for a healthier, happier you.</p>
+        </div>
+        
+      </section>
+      
+      <!-- The seevice section(the services they provides) -->
+      <section class="second-section service-section">
+        
+        <h2>Transform <span>Your Body with Our</span> Expert Trainers</h2>
+        <p>Achieve your fitness goals with our personalized training programs</p>
+          
+        <div class="service-image-section">
+          <img src="yoga.jpg" alt="two people doing yoga" />
+          <a href="#"><button class="more-content" type="submit">Learn more</button></a>
+        </div>
+          
+        <div class="service-image-section">
+          <img src="handshake.jpg" alt="two people handshaked" />
+          <a href="#"><button class="more-content" type="submit">Learn more</button></a>
+        </div>
+          
+        <div class="service-image-section">
+          <img src="instructor-image.jpg" alt="picture of a gym instructor" />
+          <a href="#"><button class="more-content" type="submit">Learn more</button></a>
+        </div>
+        
+      </section>
+      
+      <!-- Testimonies provided from clients and members of the gym community -->
+      <section class="third-section testimonial-section">
+        
+        <h2>What Our <span>Members</span> Say</h2>
+        
+        <div class="review review1">
+          <div class="review-header">
+            <img src="image-daniel.jpg" alt="Daniel's Profile Picture" />
+            <div>
+              <p class="name">Daniel Smith</p>
+              <p class="customer">Gym Enthusiast</p>
+            </div>
+          </div>
+          
+          <p>
+            “I've been going to this gym for months now, and I can honestly say it's the best decision I've ever made. The equipment is top-notch, the staff is friendly and knowledgeable, and the atmosphere is always motivating.”
+          </p>
+        </div>
+        
+        <div class="review review1">
+          <div class="review-header">
+            <img src="image-emily.jpg" alt="Emily's Profile Picture" />
+            <div>
+              <p class="name">Emily Wilson</p>
+              <p class="customer">Fitness Enthusiast</p>
+            </div>
+          </div>
+          
+          <p>
+            “The personal training sessions have been a game-changer for me. I've never felt more confident and strong.”
+          </p>
+        </div>
+        
+        <div class="review review1">
+          <div class="review-header">
+            <img src="image-sophia.jpg" alt="Sophia's Profile Picture" />
+            <div>
+              <p class="name">Sophia Patel</p>
+              <p class="customer">Yoga Instructor</p>
+            </div>
+          </div>
+          
+          <p>
+            “The gym's focus on holistic wellness has helped me improve not just my physical health, but also my mental and emotional well-being.”
+          </p>
+        </div>
+        
+      </section>
+      
+      <!-- contact form -->
+      <section class="fourth-section contact-section">
+        
+        <h2><span>Contact</span> Us</h2>
+        
+        <div class="contact-form">
+          
+          <form class="" action="" method="POST" accept-charset="utf-8">
+            
+            <label for="firstname">
+              <input role="textbox" type="text" name="firstname" id="firstname" placeholder="Firstname" required minlength="1" maxlength="50" pattern="[a-zA-Z]+" title="Only letters allowed">
+            </label>
+            
+            <label for="lastname">
+              <input role="textbox" type="text" name="lastname" id="lastname" placeholder="Lastname" required minlength="1" maxlength="50" pattern="[a-zA-Z]+" title="Only letters allowed">
+            </label>
+            
+            <label for="email">
+              <input role="email" type="email" name="user-email" id="email" placeholder="Email" required>
+            </label>
+            
+            <label for="message">
+              <textarea role="comment" name="comment" id="message" placeholder="Your message goes here" required maxlength="1000"></textarea>
+            </label>
+            
+            <button role="button" type="submit" class="summit">Summit</button>
+            
+          </form>
+          
+        </div>
+        
+      </section>
+      
+    </main>
+    
+    <!-- bottom section of the site aka footer which contains essential information about the site -->
+    <footer>
+      
+      <!--<p class="socials">follow us on:</p>-->
+      
+      <div class="social-icons">
+        
+        <a href="#"><img src="twitter.png" alt="twitter icon"></a>
+        <a href="#"><img src="facebook.png" alt="facebook icon"></a>
+        <a href="#"><img src="instagram.png" alt="Instagram icon"></a>
+        
+      </div>
+      
+      <hr>
+      
+      <!-- Contact information -->
+      <div class="contact">
+        
+        <p class="headings">Contacts</p>
+        <p>Working Days/Hours: Mon - Sat / 7:00 AM - 17:00 PM</p>
+        <p class="address">Address: 123 main St, Anytown, USA 12345</p>
+        <p class="tel">Customer Care Support: <a href="tel:+1234567890">+1234567890</a></p>
+        <p class="email">Email: <a href="mailto:info@example.com">info@example.com</a></p>
+        
+      </div>
+      
+      <div class="links">
+        
+        <p class="headings">Quick Links</p>
+        <p class="home-link"><a href="#">Home</a></p>
+        <p class="service-link"><a href="#">Services</a></p>
+        <p class="about-link"><a href="#">About Us</a></p>
+        <p class="contact-link"><a href="#">Contact Us</a></p>
+        
+      </div>
+      
+      <div class="top-button">
+        <button class="back-to-top" onclick="window.scrollTo(0, 0)">Back to top</button>
+      </div>
+      
+      <!-- copyright -->
+      <small class="copyright">Copyright &copy; 2025. All rights reserved.</small>
+      
+    </footer>
+    
+  </div>
+
+</body>
+
+  </html>
