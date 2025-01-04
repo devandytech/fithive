@@ -1,0 +1,489 @@
+/* 
+
+*/
+
+/* A universal style attribute which affects all elements and html tag */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* media element to target mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .nav-head {
+    width: 100%;
+    background-color: #F7F7F7;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* logo image */
+  img {
+    margin: auto 0;
+  }
+  
+  /* styling for the burger menu navigation */
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    margin: 20px;
+  }
+
+  .line {
+    height: 3px;
+    width: 100%;
+    background-color: #8BC34A;
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease
+  }
+
+  /* Menu Styles */
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+  }
+
+  /* Active States */
+  .menu.active {
+    display: block;
+  }
+
+  .burger-menu.active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger-menu.active .line:nth-child(2)
+ {
+    opacity: 0;
+  }
+
+  .burger-menu.active .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* stlye for the header */
+  header {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 11em;
+    padding-bottom: 11em;
+    background-image: linear-gradient(to top, #2196F3, #F7F7F7);
+    background-image: url(background-image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-clip: border-box;
+    border-top: 1px solid #F7F7F7;
+  }
+  
+  h1 {
+    width: 80%;
+    text-indent: -50px;
+    text-shadow: 5px 5px #000;
+    color: #8BC34A;
+    margin: 0.5em auto;
+    padding: 0;
+    font-size: 2.5em;
+    backdrop-filter: blur(1px);
+  }
+  
+  header p {
+    width: 80%;
+    color: #F7F7F7;
+    padding: 0;
+    margin: auto;
+    font-size: 1em;
+  }
+  
+  header a {
+    width: 30%;
+    text-decoration: none;
+    display: block;
+    margin: 2em auto;
+  }
+  
+  button.cta-button {
+    margin: auto;
+    padding: 0.8em 1.3em;
+    align-items: center;
+    display: flex;
+    font-size: 0.9em;
+    cursor: pointer;
+    background-color: #F7F7F7;
+    border: none;
+  }
+  
+  .cta-button:hover {
+    background-color: #8BC34A;
+  }
+  
+  /* style for the main contents and sections */
+  main {
+    width: 100%;
+    border: 1px solid #F7F7F7;
+    
+  }
+  
+  /* styles for first section(benefit) */
+  section.first-section {
+    margin: 0 auto; 
+    background-color: #F7F7F7;
+    border: 1px solid #F7F7F7;
+  }
+  
+  section h2 {
+    text-align: center;
+    margin: 1.5em auto;
+  }
+
+  .sub-section {
+    width: 80%;
+    background-color: #F7F7F7;
+    text-align: center;
+  }
+  
+  .benefit-section-1 {
+    margin: 5em auto 5.5em auto;
+  }
+  
+  .benefit-section-2 {
+    margin: 0 auto;
+  }
+  
+  .benefit-section-3 {
+    margin: 4.5em auto 7.5em auto;
+  }
+  
+  .sub-section h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 1.5em auto 1em auto;
+  }
+  
+  .sub-section p {
+    line-height: 1.5em;
+    margin-bottom: 0.8em;
+  }
+  
+  .image {
+    margin: 0.8em auto 2em auto;
+  }
+  
+  .image img {
+    width: 30%;
+    height: 20%;
+  }
+  
+  /* styles for second section(services) */
+  section.second-section {
+    background-color: #2196F3;
+    text-align: center;
+    padding-bottom: 5em;
+    border: 1px solid #2166F3;
+  }
+  
+  .second-section h2 {
+    color: #FFFFFF;
+  }
+  
+  .second-section p {
+    width: 80%;
+    margin: auto;
+    color: #F7F7F7;
+  }
+  
+  .service-image-section {
+    width: 90%;
+    background-color: #F7F7F7;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 3em auto 0 auto;
+    padding: 0;
+  }
+  
+  .service-image-section:last-child {
+    margin-bottom: 3em;
+  }
+  
+  .service-image-section img {
+    width: 90%;
+    height: 60%;
+    padding: 1em;
+    border-radius: 10px;
+  }
+  
+  .service-image-section a {
+    color: none;
+    text-decoration: none;
+  }
+  
+  button.more-content {
+    font-size: 0.8em;
+    padding: 1em;
+    margin: 0 auto 3em auto;
+    background-color: #8BC34A;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: none;
+  }
+  
+  button.more-content:hover {
+    background-color: #2196F3;
+    transition: 0.2s ease-in;
+  }
+  
+  /* style for third section(testimonial card) */
+  section.third-section {
+    padding-bottom: 5em;
+    background-color: #F7F7F7;
+    border: 1px solid #F7F7F7;
+  }
+  
+  .third-section h2 {
+    margin: 2.8em auto;
+  }
+  
+  span {
+    color: #8BC34A;
+  }
+  
+  .review {
+    width: 80%;
+    margin: 2.8em auto;
+    padding: 1em;
+    border-radius: 10px; /* added subtle rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* added subtle shadow */
+  }
+  
+  .review-header {
+    display: flex; /* changed to flexbox for easier alignment */
+    align-items: center; 
+    padding: 0.8em;
+  }
+  
+  .review-header img {
+    width: 15%;
+    margin-right: 0.8em;
+    border-radius: 50%;
+    border: 1px solid #ddd; 
+  }
+
+  .review-header p {
+    margin: 0; /* removed margin */
+  }
+
+  .name {
+    font-weight: bold; /* bolded name */
+  }
+
+  .customer {
+    color: #666; /* darkened customer text */
+  }
+  
+  /* style for the contact form(contact form) */
+  .fourth-section {
+    background-color: #2196F3;
+    padding-bottom: 6em;
+    border: 1px solid #2196F3;
+  }
+  
+  .fourth-section {
+    color:  #F7F7F7;
+  }
+  
+  div.contact-form {
+    width: 80%;
+    margin: auto;
+    padding: 1.5em;
+    background-color: rgba(247, 247, 247);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  form {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  input {
+    margin: 1em 0;
+    border-radius: 5px;
+    background-color: #FFF;
+    border: none;
+  }
+  
+  textarea:focus, input:focus {
+    border: 2px solid #8BC34A;
+    outline: none;
+  }
+  
+  textarea {
+    margin: 1.2em 0 0.8em 0;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  input#firstname, input#lastname {
+    width: 40%;
+    padding: 0.8em;
+  }
+  
+  #lastname {
+    float: right;
+  }
+  
+  #email {
+    width: 93%;
+    padding: 0.8em;
+    margin-left: auto;
+  }
+  
+  #message {
+    width: 93%;
+    padding: 0.8em 0.8em 6em 0.8em;
+    margin-left: auto;
+  }
+  
+  button.summit {
+    display: block;
+    margin-left: auto;
+    padding: 1.2em;
+    margin-bottom: 1em;
+    text-align: right;
+    background-color: #8BC34A;
+    border-radius: 40px;
+    border: 1px solid #8BC34A;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* styles for footer */
+  footer {
+    width: 100%;
+    background-color: #F7F7F7;
+    border: 1px solid #F7F7F7;
+  }
+  
+  .socials {
+    margin: 3em 0 1em 1em;
+  }
+  
+  .contact, .links {
+    width: 50%;
+    margin: 0.8em 0 0.5em 1em;
+    color: #13131A;
+  }
+  
+  .social-icons {
+    width: 100%;
+    margin: 2em 0 0 0;
+    padding: 0.5em 0.5em 0.5em 0;
+  }
+  
+  .social-icons img  {
+    width: 30px;
+  }
+  
+  .social-icons a {
+    padding: 0 0.2em 0 0;
+    margin-left: 1em;
+  }
+  
+  hr {
+    width: 90%;
+    background-color: #8BC34A;
+    border-radius: 2px;
+    margin: 1.5em auto 3em auto;
+  }
+  
+  .address, .email, .service-link, .tel, .about-link, .contact-link {
+    margin-top: 0.8em;
+  }
+  
+  .contact a {
+    text-decoration: underline;
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: #13131A;
+  }
+  
+  /* reminder! the margin where written this way because margin left has been applied before in line "381" with the class ".contact" */
+  .links {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  
+  .headings {
+    margin: 1em 0;
+    font-size: 1.5em;
+  }
+  
+  .top-button {
+    width: 90%;
+    margin: auto;
+  }
+  
+  .back-to-top {
+    width: 100%;
+    padding: 0.8em;
+    text-align: center;
+    color: #13131A;
+    background-color: #FFFFFF;
+    border: 1px solid #8BC34A;
+  }
+  
+  .copyright {
+    font-size: ;
+    color: #13131A;
+    padding: 0;
+    display: block;
+    text-align: center;
+    margin: 3em auto 2em auto;
+  }
+  
+}
