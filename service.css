@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.monstserrat, span, .headings {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* media element to target mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  :root {
+  --primary-width: 100%;
+  --secondary-width: 90%;
+  --margin-padding: 1em;
+  --secondary-margin-padding: 0.5em;
+  --primary-color: #D9D9D9;
+  --secondary-color: #1b263b;
+  --color: black;
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--primary-color);
+  }
+  
+  .container {
+    margin: 0;
+    padding: 0 1em;
+    background-color: #D9D9D9;
+  }
+  
+  .nav-head {
+    width: 100%;
+    background-color: var(--secondary-color);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* logo image */
+  .logo {
+    width: 6em;
+    height: 2em;
+    margin: auto 0;
+    color: #fff;
+    display: block;
+    padding-left: 0.7em;
+  }
+  
+  /* styling for the burger menu navigation */
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    margin: 20px;
+  }
+
+  .line {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease
+  }
+
+  /* Menu Styles */
+  .menu {
+    width: 30%;
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 0px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    margin: 1em 0;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 16px;
+  }
+
+  /* Active States */
+  .menu.active {
+    display: block;
+  }
+
+  .burger-menu.active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger-menu.active .line:nth-child(2)
+ {
+    opacity: 0;
+  }
+
+  .burger-menu.active .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* styles for header */
+  header {
+    width: 100%;
+    font-size: em;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5em 0;
+  }
+  
+  header h1 {
+    padding: 2em 0 1em;
+    margin: 0 auto;
+    color: #0077B6;
+  }
+  
+  header p {
+    text-align: justify;
+    line-height: 1.5em;
+    padding-bottom: 1.5em;
+    margin: 0 auto;
+    color: var(--secondary-color);
+  }
+  
+  .services {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .service-offer {
+    margin: 1.8em 0 0 0;
+    padding: 2.5em 1.5em;
+    background-color: #f7f7f7;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-offer:hover {
+    border: 2px solid #32CD32;
+    transform: translateY(-5px);
+  }
+  
+  .service-offer img {
+    width: 28%;
+    height: 10%
+    margin: 1.5em auto;
+  }
+  
+  .service-offer h3 {
+    padding-bottom: 1em;
+    color: #0077B6;
+  }
+  
+  .service-offer p {
+    line-height: 1.5em;
+    padding-bottom: 1.5em;
+    color: var(--color);
+  }
+  
+  .button {
+    margin: 1em auto 1.5em auto;
+  }
+  
+  a.cta-button {
+    width: 30%;
+    text-decoration: none;
+    margin: 0 auto;
+    padding: 0.5em 0.8em;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    background-color: #0077B6;
+    border: none;
+  }
+  
+  a.cta-button:hover {
+    background-color: #32CD32;
+    color: var(--color);
+    transform: translateY(-5px);
+  }
+  
+  .card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  .appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* schedule styling */
+  .schedule-section {
+    margin: 5em auto 3em auto;
+    padding: 0.7em;
+    background-color: #fff;
+    display: block;
+  }
+  
+  .schedule-section h2 {
+    margin: 2em 0 1em 0.2em;
+    color: #0077B6;
+  }
+  
+  details {
+    color: #13131A;
+    margin: 0.5em auto;
+    padding: 0.5em;
+    transition: height 0.4s ease-out;
+    overflow: hidden;
+  }
+  
+  details p {
+    padding: var(--secondary-margin-padding);
+  }
+  
+  details p:last-child {
+    border-bottom: 1px solid black;
+  }
+  
+  details[open] {
+    transition: height 0.3s ease-out;
+  }
+  
+  summary {
+    color: var(--color);
+    padding: 0.8em;
+    margin-bottom: var(--secondary-margin-padding);
+    border-bottom: 1px solid #13131A;
+    cursor: pointer;
+  }
+  
+  span {
+    font-weight: thin;
+    color: #0077B6;
+    line-height: 2em;
+  }
+  
+  /* styles for footer */
+  footer {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+  }
+  
+  .contact, .links {
+    width: 100%;
+    margin: 0.8em 0 0.5em 0em;
+    color: #F7F7F7;
+  }
+  
+  .social-icons {
+    width: 100%;
+    margin: 1em auto 1em auto;
+    padding: 0.5em 0.5em 0.5em 0;
+  }
+  
+  .social-icons img  {
+    width: 30px;
+  }
+  
+  .social-icons a {
+    padding: 0 0.2em 0 0;
+    margin-left: 1em;
+  }
+  
+  .line-one {
+    width: 90%;
+    margin: auto;
+  }
+  
+  .line-two {
+    width: 100%;
+    margin: 3em auto 0em auto;
+  }
+  
+  .address, .email, .service-link, .tel, .about-link, .contact-link {
+    margin-top: 0.8em;
+  }
+  
+  .home-link a:hover, .service-link a:hover, .about-link a:hover, .contact-link a:hover, .email a:hover, .tel a:hover {
+    color: #32CD32;
+  }
+  
+  .contact a, .links a {
+    text-decoration: none;
+    color: #F7F7F7;
+  }
+  
+  /* reminder! the margin where written this way because margin left has been applied before with the class ".contact" */
+  .links {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  
+  .headings {
+    margin: 1em 0;
+    font-size: 1.5em;
+    color: #0077B6;
+  }
+  
+  .top-button {
+    width: 90%;
+    margin: 3.5em auto 0 auto;
+  }
+  
+  .back-to-top {
+    width: 100%;
+    padding: 0.8em;
+    text-align: center;
+    color: #13131A;
+    background-color: #F7F7F7;
+    border: 1px solid var(--primary-color);
+  }
+  
+  .copyright {
+    color: #F7F7F7;
+    padding: 0;
+    display: block;
+    text-align: center;
+    margin: 3em auto 2em auto;
+  }
+    
+}
