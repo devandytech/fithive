@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="/home/main.js" type="text/javascript" charset="utf-8"></script>
+  <title>FitHive | Contact Us</title>
+  <style type="text/css" media="all">
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --primary-width: 100%;
+    --secondary-width: 90%;
+    --margin-padding: 1em;
+    --secondary-margin-padding: 0.5em;
+    --primary-color: #D9D9D9;
+    --secondary-color: #1b263b;
+    --color: black;
+  }
+  
+  
+  body {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: #13131A;
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .monstserrat {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  button.submit {
+    font-family: "Lato", serif;
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  .nav-head {
+    width: 100%;
+    background-color: var(--secondary-color);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* logo image */
+  .logo {
+    width: 6em;
+    height: 2em;
+    margin: auto 0;
+    color: #fff;
+    display: block;
+    padding-left: 0.7em;
+  }
+  
+  /* styling for the burger menu navigation */
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    margin: 20px;
+  }
+
+  .line {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease
+  }
+
+  /* Menu Styles */
+  .menu {
+    width: 30%;
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 0px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    margin: 1em 0;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 16px;
+  }
+
+  /* Active States */
+  .menu.active {
+    display: block;
+  }
+
+  .burger-menu.active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger-menu.active .line:nth-child(2)
+ {
+    opacity: 0;
+  }
+
+  .burger-menu.active .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  div.container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h1 {
+    margin: 2em auto;
+    text-align: center;
+  }
+  
+  span {
+    color: #0077B6;
+  }
+  
+  /* styles for contact information */
+  section.contact-info {
+    width: 78%;
+    padding: 1.5em 1.5em 2em 1.5em;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: 1em auto 3em auto;
+  }
+  
+  .contact-info h2 {
+    padding-bottom: 1em;
+  }
+  
+  .colored {
+    color: #0077B6;
+    padding-bottom: 0.5em;
+    font-weight: bold;
+  }
+  
+  .location, .Phone, .Email {
+    margin-bottom: 1em;
+  }
+  
+  /* styles for all icons */
+  img.contact-icons {
+    width: 8%;
+    margin: 2em 0 0.5em 0;
+  }
+  
+  /* styles for contact-form */
+  section.contact-form {
+    width: 90%;
+    margin: 1.5em auto;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .contact-form h2 {
+    padding: 1em;
+  }
+  
+  form {
+    margin: auto;
+    padding: 1.5em;
+  }
+  
+  input, textarea {
+    margin: 0.5em auto 2.5em auto;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid gray;
+  }
+  
+  #firstname {
+    width: 90%;
+    padding: 0.9em;
+  }
+  
+  #email {
+    width: 90%;
+    padding: 0.9em;
+  }
+  
+  #subject {
+    width: 90%;
+    padding: 0.9em;
+  }
+  
+  #message {
+    width: 90%;
+    padding: 0.8em 0.8em 6em 0.8em;
+  }
+  
+  button.submit {
+    width: 97.5%;
+    text-align: center;
+    margin: 0.5em auto;
+    padding: 0.9em;
+    color: #fff;
+    font-weight: bold;
+    background-color: #0077B6;
+    border: none;
+  }
+  
+  button.submit:hover {
+    background-color: #32CD32;
+    color: var(--color);
+    border: 1px solid #32CD32;
+  }
+  
+  input::placeholder, textarea::placeholder {
+    color: var(--color);
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  input:focus, textarea:focus {
+    border: 2px solid #32CD32;
+    box-shadow: 0 0 5px rgba(0, 119, 182, 0.5);
+  }
+ 
+  .user-name, .user-email, .user-subject, .user-message {
+    font-weight: bold;
+    color: #0077B6;
+  }
+  
+  /* styles for footer */
+  footer {
+    width: 100%;
+    text-align: center;
+    background-color: var(--secondary-color);
+    margin: 3em 0 0 0;
+    border: 1px solid var(--secondary-color);
+  }
+  
+  .contact, .links {
+    width: 100%;
+    margin: 0.8em 0 0.5em 0em;
+    color: #13131A;
+  }
+  
+  .social-icons {
+    width: 100%;
+    margin: 1em auto 1em auto;
+    padding: 0.5em 0.5em 0.5em 0;
+  }
+  
+  .social-icons img  {
+    width: 30px;
+  }
+  
+  .social-icons a {
+    padding: 0 0.2em 0 0;
+    margin-left: 1em;
+  }
+  
+  .line-one {
+    width: 90%;
+    margin: auto;
+  }
+  
+  .line-two {
+    width: 100%;
+    margin: 3em auto 0em auto;
+  }
+  
+  .address, .email, .service-link, .tel, .about-link, .contact-link {
+    margin-top: 0.8em;
+    color: #F7F7F7;
+  }
+  
+  .home-link a:hover, .service-link a:hover, .about-link a:hover, .contact-link a:hover, .email a:hover, .tel a:hover {
+    color: #32CD32;
+  }
+  
+  .contact a, .links a {
+    text-decoration: none;
+    color: #F7F7F7;
+  }
+  
+  /* reminder! the margin where written this way because margin left has been applied before in line "381" with the class ".contact" */
+  .links {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  
+  .headings {
+    margin: 1em 0;
+    font-size: 1.5em;
+    color: #0077B6;
+  }
+  
+  .top-button {
+    width: 90%;
+    margin: 3.5em auto 0 auto;
+  }
+  
+  .back-to-top {
+    width: 100%;
+    padding: 0.8em;
+    text-align: center;
+    color: #13131A;
+    background-color: #F7F7F7;
+    border: 1px solid var(--primary-color);
+  }
+  
+  .copyright {
+    color: #F7F7F7;
+    padding: 0;
+    display: block;
+    text-align: center;
+    margin: 3em auto 2em auto;
+  }
+  </style>
+</head>
+
+<body>
+  
+  <!-- navigation head -->
+  <div class="nav-head">
+      
+    <!-- website logo -->
+    <div class="logo monstserrat"><h2>FitHive<h2></div>
+      
+    <div class="burger-menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+      
+    <!-- navigation links -->
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+      
+  </div>
+    
+  <div class="container">
+    
+    <h1 class="monstserrat">Contact <span>Us</span></h1>
+    
+    <!-- Contact Information -->
+    <section class="contact-info">
+      
+      <h2 class="monstserrat">Contact Information</h2>
+      
+      <div class="location">
+        <img src="/contact/map.png" alt="location indicator icon" class="contact-icons" />
+        <p class="colored">Address</p>
+        <p class="contact-address">123 main St, Anytown, USA 12345</p>
+      </div>
+      
+      <div class="Phone">
+        <img src="/contact/phone-receiver.png" alt="phone icon" class="contact-icons" />
+        <p class="colored">Call Us</p>
+        <p class="contact-tel"> <a href="tel:+1234567890">+1234567890</a></p>
+      </div>
+      
+      <div class="Email-address">
+        <img src="/contact/email.png" alt="email icon" class="contact-icons" />
+        <p class="colored">Email Us</p>
+        <p class="contact-email"><a href="mailto:info@example.com">info@example.com</a></p>
+      </div>
+      
+    </section>
+    
+    <!-- Form -->
+    <section class="contact-form">
+      
+      <h2 class="monstserrat">Send Us a Message</h2>
+      
+      <form class="" action="" method="POST" accept-charset="utf-8">
+        <label for="firstname">
+          <p class="user-name">Name</p>
+          <input role="textbox" type="text" name="firstname" id="firstname" required minlength="1" maxlength="50" pattern="[a-zA-Z]+" title="Only letters allowed" placeholder="Your Name">
+        </label>
+            
+        <label for="email" class="labels">
+          <p class="user-email">Email</p>
+          <input role="email" type="email" name="user-email" id="email" required placeholder="example@gmail.com">
+        </label>
+            
+        <label for="subject" class="labels">
+          <p class="user-subject">Subject</p>
+          <input role="textbox" type="text" name="firstname" id="subject" required minlength="1" maxlength="50" pattern="[a-zA-Z]+" title="Only letters allowed" placeholder="Message title">
+        </labe>
+            
+        <label for="message" class="labels">
+          <p class="user-message">Message</p>
+          <textarea role="comment" name="comment" id="message" placeholder="Your message goes here" required maxlength="1000"></textarea>
+        </label>
+            
+        <button role="button" type="submit" class="submit">Submit</button>
+          
+      </form>
+         
+    </section>
+    
+  </div>
+  
+  <!-- bottom section of the site aka footer which contains essential information about the site -->
+  <footer>
+      
+    <div class="social-icons">
+        
+      <a href="#"><img src="twitter.png" alt="twitter icon"></a>
+      <a href="#"><img src="facebook.png" alt="facebook icon"></a>
+      <a href="#"><img src="github.jpg" alt="Instagram icon"></a>
+        
+    </div>
+      
+    <hr class="line-one">
+      
+    <div class="links">
+        
+      <p class="headings monstserrat">Quick Links</p>
+      <p class="home-link"><a href="index.html">Home</a></p>
+      <p class="service-link"><a href="service.html">Services</a></p>
+      <p class="about-link"><a href="about.html">About Us</a></p>
+      <p class="contact-link"><a href="contact.html">Contact Us</a></p>
+        
+    </div>
+      
+    <!-- Contact information -->
+    <div class="contact">
+        
+      <p class="headings monstserrat">Contacts</p>
+      <p class="address">123 main St, Anytown, USA 12345</p>
+      <p class="tel"> <a href="tel:+1234567890">+1234567890</a></p>
+      <p class="email"><a href="mailto:info@example.com">info@example.com</a></p>
+        
+    </div>
+      
+    <div class="top-button">
+      <button class="back-to-top" onclick="window.scrollTo(0, 0)">Back to top</button>
+    </div>
+      
+    <hr class="line-two">
+      
+    <!-- copyright -->
+    <small class="copyright">Copyright &copy; 2025. All rights reserved.</small>
+      
+  </footer>
+  
+</body>
+
+</html>
