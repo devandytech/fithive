@@ -4,21 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Monstserrat font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Lato font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="main.js"></script>
-  <title></title>
+  <title>FitHive | Home</title>
 </head>
 
 <body>
   
-  <!-- Container for all structure -->
-  <div class="container">
-    
     <!-- navigation head -->
     <div class="nav-head">
       
       <!-- website logo -->
-      <img src="" alt="business logo">
+      <div class="logo monstserrat"><h2>FitHive<h2></div>
       
       <div class="burger-menu">
         <div class="line"></div>
@@ -29,21 +34,23 @@
       <!-- navigation links -->
       <nav class="menu">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#service">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="/home/index.html">Home</a></li>
+          <li><a href="/services/service.html">Services</a></li>
+          <li><a href="/about/about.html">About</a></li>
+          <li><a href="/contact/contact.html">Contact</a></li>
         </ul>
       </nav>
       
     </div>
     
+    <div class="container">
+    
     <!-- Hero section -->
     <header>
       
-      <h1>FIND YOUR STRENGTH</h1>
+      <h1 class="monstserrat">FIND YOUR STRENGTH</h1>
       <p>Empowering Fitness Solutions for a Stronger, Healthier You</p>
-      <a href="#"><button class="cta-button">Book Now </button></a>
+      <a href="#" class="cta-button-header">Book Now</a>
       
     </header>
     
@@ -52,27 +59,27 @@
       <!-- The offer section(this compromised of what the business offers -->
       <section class="first-section offer-section">
         
-        <div class="sub-section benefit-section-1">
-          <div class="image instructor-image">
+        <div class="sub-section benefit-section-1 card">
+          <div class="image">
             <img src="body-abs.png" alt="body abs of an icon">
           </div>
-          <h3><span>Great Instructors</span></h3>
+          <h3 class="monstserrat"><span>Great Instructors</span></h3>
           <p>Learn from the best, train with the rest - Expert guidance for a stronger you.</p>
         </div>
         
-        <div class="sub-section benefit-section-2">
-          <div class="image treadmill-image">
-             <img src="barbell.png" alt="barbell of an icon">
+        <div class="sub-section benefit-section-2 card">
+          <div class="image">
+            <img src="barbell.png" alt="barbell of an icon">
           </div>
-          <h3><span>State-of-the-art Equipment</span></h3>
+          <h3 class="monstserrat"><span>State-of-the-art Equipment</span></h3>
           <p>Elevate your workout, elevate your results - Top-tier equipment for a premium fitness experience.</p>
         </div>
         
-        <div class="sub-section benefit-section-3">
-          <div class="image instructor-and-client">
+        <div class="sub-section benefit-section-3 card">
+          <div class="image">
             <img src="heart-rate.png" alt="heart rate on a phone icon">
           </div>
-          <h3><span>Personalized Attention</span></h3>
+          <h3 class="monstserrat"><span>Personalized Attention</span></h3>
           <p>Your fitness, your way - Customized support for a healthier, happier you.</p>
         </div>
         
@@ -81,22 +88,41 @@
       <!-- The seevice section(the services they provides) -->
       <section class="second-section service-section">
         
-        <h2>Transform <span>Your Body with Our</span> Expert Trainers</h2>
-        <p>Achieve your fitness goals with our personalized training programs</p>
-          
-        <div class="service-image-section">
-          <img src="yoga.jpg" alt="two people doing yoga" />
-          <a href="#"><button class="more-content" type="submit">Learn more</button></a>
+        <h2 class="monstserrat">Our <span>Service</span></h2>
+        
+        <div class="flex">
+       
+        <div class="service-offer service-1 slide-from-left">
+          <img src="/services/curriculum.png" alt="image one">
+          <h3 class="monstserrat">Personal Training</h3>
+          <p>Customized workout plans, one-on-one guidance, and ongoing support help you reach new heights and celebrate transformative results.</p>
+          <div class="button">
+            <a href="#" class="cta-button">Book Now</a>
+          </div>
         </div>
-          
-        <div class="service-image-section">
-          <img src="handshake.jpg" alt="two people handshaked" />
-          <a href="#"><button class="more-content" type="submit">Learn more</button></a>
+        
+        <div class="service-offer service-2 slide-from-right">
+          <img src="/services/yoga-pose.png" alt="image two">
+          <h3 class="monstserrat">Group Fitness Classes</h3>
+          <p>Elevate your fitness journey with our dynamic group classes, expertly designed to challenge, motivate, and transform your body.</p>
+          <div class="button">
+            <a href="#" class="cta-button">Book Now</a>
+          </div>
         </div>
-          
-        <div class="service-image-section">
-          <img src="instructor-image.jpg" alt="picture of a gym instructor" />
-          <a href="#"><button class="more-content" type="submit">Learn more</button></a>
+       
+        <div class="service-offer service-3 slide-from-left">
+          <img src="/services/weight-lifting.png" alt="image three">
+          <h3 class="monstserrat">Gym Amenities</h3>
+          <p>Enjoy access to top-notch equipment, clean and spacious facilities, and convenient services that make your fitness routine effortless.</p>
+          <div class="button">
+            <a href="#" class="cta-button">Book Now</a>
+          </div>
+        </div>
+        
+        </div>
+        
+        <div class="explore">
+          <a href="#" class="explore-button">Explore More</a>
         </div>
         
       </section>
@@ -104,48 +130,52 @@
       <!-- Testimonies provided from clients and members of the gym community -->
       <section class="third-section testimonial-section">
         
-        <h2>What Our <span>Members</span> Say</h2>
+        <h2 class="monstserrat">What Our <span>Members</span> Say</h2>
         
-        <div class="review review1">
+        <div class="flex">
+          
+        <div class="review left-fade">
           <div class="review-header">
-            <img src="image-daniel.jpg" alt="Daniel's Profile Picture" />
+            <img src="image-daniel.jpg" alt="Daniel's Profile Picture" class="same"/>
             <div>
               <p class="name">Daniel Smith</p>
               <p class="customer">Gym Enthusiast</p>
             </div>
           </div>
           
-          <p>
+          <p class="testimony">
             “I've been going to this gym for months now, and I can honestly say it's the best decision I've ever made. The equipment is top-notch, the staff is friendly and knowledgeable, and the atmosphere is always motivating.”
           </p>
         </div>
         
-        <div class="review review1">
+        <div class="review right-fade">
           <div class="review-header">
-            <img src="image-emily.jpg" alt="Emily's Profile Picture" />
+            <img src="image-emily.jpg" alt="Emily's Profile Picture" class="emily"/>
             <div>
               <p class="name">Emily Wilson</p>
               <p class="customer">Fitness Enthusiast</p>
             </div>
           </div>
           
-          <p>
+          <p class="testimony">
             “The personal training sessions have been a game-changer for me. I've never felt more confident and strong.”
           </p>
         </div>
         
-        <div class="review review1">
+        <div class="review left-fade">
           <div class="review-header">
-            <img src="image-sophia.jpg" alt="Sophia's Profile Picture" />
+            <img src="image-sophia.jpg" alt="Sophia's Profile Picture" class="same"/>
             <div>
               <p class="name">Sophia Patel</p>
               <p class="customer">Yoga Instructor</p>
             </div>
           </div>
           
-          <p>
+          <p class="testimony">
             “The gym's focus on holistic wellness has helped me improve not just my physical health, but also my mental and emotional well-being.”
           </p>
+        </div>
+        
         </div>
         
       </section>
@@ -153,67 +183,57 @@
       <!-- contact form -->
       <section class="fourth-section contact-section">
         
-        <h2><span>Contact</span> Us</h2>
-        
-        <div class="contact-form">
+        <h2 class="monstserrat"><span>Contact</span> Us</h2>
           
           <form class="" action="" method="POST" accept-charset="utf-8">
-            
             <label for="firstname">
-              <input role="textbox" type="text" name="firstname" id="firstname" placeholder="Firstname" required minlength="1" maxlength="50" pattern="[a-zA-Z]+" title="Only letters allowed">
+              <p class="user-name">Name</p>
+              <input role="textbox" type="text" name="firstname" id="firstname" required minlength="1" maxlength="50" pattern="[a-zA-Z]+" title="Only letters allowed" placeholder="Your Name">
             </label>
             
-            <label for="lastname">
-              <input role="textbox" type="text" name="lastname" id="lastname" placeholder="Lastname" required minlength="1" maxlength="50" pattern="[a-zA-Z]+" title="Only letters allowed">
+            <label for="email" class="labels">
+            <p class="user-email">Email</p>
+            <input role="email" type="email" name="user-email" id="email" required placeholder="example@gmail.com">
             </label>
             
-            <label for="email">
-              <input role="email" type="email" name="user-email" id="email" placeholder="Email" required>
-            </label>
+            <label for="subject" class="labels">
+              <p class="user-subject">Subject</p>
+              <input role="textbox" type="text" name="firstname" id="subject" required minlength="1" maxlength="50" pattern="[a-zA-Z]+" title="Only letters allowed" placeholder="Message title">
+            </labe>
             
-            <label for="message">
+            <label for="message" class="labels">
+              <p class="user-message">Message</p>
               <textarea role="comment" name="comment" id="message" placeholder="Your message goes here" required maxlength="1000"></textarea>
             </label>
             
-            <button role="button" type="submit" class="summit">Summit</button>
-            
+            <button role="button" type="submit" class="submit">Submit</button>
           </form>
           
-        </div>
         
       </section>
       
     </main>
     
+    </div>
+    
     <!-- bottom section of the site aka footer which contains essential information about the site -->
     <footer>
-      
-      <!--<p class="socials">follow us on:</p>-->
       
       <div class="social-icons">
         
         <a href="#"><img src="twitter.png" alt="twitter icon"></a>
         <a href="#"><img src="facebook.png" alt="facebook icon"></a>
-        <a href="#"><img src="instagram.png" alt="Instagram icon"></a>
+        <a href="#"><img src="github.png" alt="Instagram icon"></a>
         
       </div>
       
-      <hr>
+      <hr class="line-one">
       
-      <!-- Contact information -->
-      <div class="contact">
-        
-        <p class="headings">Contacts</p>
-        <p>Working Days/Hours: Mon - Sat / 7:00 AM - 17:00 PM</p>
-        <p class="address">Address: 123 main St, Anytown, USA 12345</p>
-        <p class="tel">Customer Care Support: <a href="tel:+1234567890">+1234567890</a></p>
-        <p class="email">Email: <a href="mailto:info@example.com">info@example.com</a></p>
-        
-      </div>
-      
+      <div class="info-links-1">
+       
       <div class="links">
         
-        <p class="headings">Quick Links</p>
+        <p class="headings monstserrat">Quick Links</p>
         <p class="home-link"><a href="#">Home</a></p>
         <p class="service-link"><a href="#">Services</a></p>
         <p class="about-link"><a href="#">About Us</a></p>
@@ -221,17 +241,29 @@
         
       </div>
       
+      <!-- Contact information -->
+      <div class="contact">
+        
+        <p class="headings monstserrat">Contacts</p>
+        <p class="address">123 main St, Anytown, USA 12345</p>
+        <p class="tel"> <a href="tel:+1234567890">+1234567890</a></p>
+        <p class="email"><a href="mailto:info@example.com">info@example.com</a></p>
+        
+      </div>
+      
+      </div>
+      
       <div class="top-button">
         <button class="back-to-top" onclick="window.scrollTo(0, 0)">Back to top</button>
       </div>
+      
+      <hr class="line-two">
       
       <!-- copyright -->
       <small class="copyright">Copyright &copy; 2025. All rights reserved.</small>
       
     </footer>
-    
-  </div>
 
 </body>
 
-  </html>
+          </html>
